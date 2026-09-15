@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <img src="husk.png" class="husk">
+    <style>
+        .husk {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 150px;
+            height:150px;
+        }
+    </style>
+    <section class="container">
+    <h1>Sign Up</h1>
+        <form method=POST>
+            <p>
+                <label for="email">Email</label>
+                <input type="email" required>    
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input type="password" required id="password">
+            </p>
+            <p>
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" required id="confirmpassword" minlength="8">
+            </p>
+            <input type="submit" onclick="checkpassword()">
+        </form>
+    </section>
+</body>
+    <script>
+        function checkpassword() {
+            const password1 = document.querySelector("#password").value;
+            const password2 = document.querySelector("#confirmpassword").value;
+            if (password1 !=password2) {
+                alert("Passwords do not match");
+                return false;
+            }
+                return true;
+
+
+
+        }
+
+
+
+    </script>
+</html>
